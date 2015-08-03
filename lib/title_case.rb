@@ -1,6 +1,7 @@
 class String
   define_method(:title_case) do
-    designated_words = ["the", "a", "an", "and", "to", "of", "on", "at"]
+    designated_words = ["the","in", "a", "an", "and", "to", "of", "on", "at"]
+    self.downcase!()
     old_array = self.split(" ")
     old_array.each() do |word|
       if old_array[0].eql?(word)
