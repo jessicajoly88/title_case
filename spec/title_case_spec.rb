@@ -26,4 +26,9 @@ describe('String#title_case') do
   it("process special characters") do
     expect(("I can't help you in 1984!").title_case()).to(eq("I Can't Help You in 1984!"))
   end
+
+  it("process unique case entries") do
+    expect(("I are going to mcdonald's").title_case()).to(eq("I Are Going to McDonald's"))
+ end
+
 end

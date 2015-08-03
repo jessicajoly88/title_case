@@ -11,7 +11,12 @@ class String
         else
           word.capitalize!()
         end
+      new_array = word.split()
+      if new_array[0].eql?("m") && new_array[1].eql?("c")
+        new_array[2].upcase!()
+        new_array[0].upcase!()
       end
+      word = new_array.join("")
     end
     old_array.join(" ")
   end
