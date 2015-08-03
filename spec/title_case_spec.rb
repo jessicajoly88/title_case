@@ -1,5 +1,6 @@
 require('rspec')
 require('title_case')
+require('pry')
 
 describe('String#title_case') do
   it("capitalizes the first letter of a word") do
@@ -28,7 +29,7 @@ describe('String#title_case') do
   end
 
   it("process unique case entries") do
-    expect(("I are going to mcdonald's").title_case()).to(eq("I Are Going to McDonald's"))
+    expect(("I'm going to mcdonald's").title_case()).to(eq("I'm Going to McDonald's"))
  end
 
 end

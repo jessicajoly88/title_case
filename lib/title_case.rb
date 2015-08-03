@@ -4,19 +4,22 @@ class String
     self.downcase!()
     old_array = self.split(" ")
     old_array.each() do |word|
-      if old_array[0].eql?(word)
-        word.capitalize!()
+      if word[0].eql?("m").&(word[1].eql?("c"))
+        split_word = word.split
+        split_word[0].upcase!()
+        split_word[2].upcase!()
+        word = split_word.join('')
+binding.pry
       else
-        if designated_words.include?(word)
-        else
+        if old_array[0].eql?(word)
           word.capitalize!()
+        else
+          if designated_words.include?(word)
+          else
+            word.capitalize!()
+          end
         end
-      new_array = word.split()
-      if new_array[0].eql?("m") && new_array[1].eql?("c")
-        new_array[2].upcase!()
-        new_array[0].upcase!()
       end
-      word = new_array.join("")
     end
     old_array.join(" ")
   end
