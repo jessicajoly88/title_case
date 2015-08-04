@@ -9,7 +9,6 @@ class String
         split_word[0].upcase!()
         split_word[2].upcase!()
         word = split_word.join('')
-binding.pry
       else
         if old_array[0].eql?(word)
           word.capitalize!()
